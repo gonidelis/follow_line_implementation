@@ -105,16 +105,16 @@ class MyAlgorithm(threading.Thread):
 
         LAST_ROW = 479
         for row in range(460, LAST_ROW):
-            if (mask[row][140] == 0 and mask[row][460] == 0):
+            if (mask[row][160] == 0 and mask[row][440] == 0):
                 self.motors.sendV(5)
                 self.motros.sendW(0)
-            if (mask[LAST_ROW][140] == 0 and mask[LAST_ROW][460] != 0):
+            if (mask[LAST_ROW][160] == 0 and mask[LAST_ROW][440] != 0):
                 self.motors.sendV(5) 
                 self.motors.sendW(1)
-            if (mask[LAST_ROW][460] == 0 and mask[LAST_ROW][140] != 0):
+            if (mask[LAST_ROW][440] == 0 and mask[LAST_ROW][160] != 0):
                 self.motors.sendV(5) 
                 self.motors.sendW(-1)
-            if (mask[LAST_ROW][140] != 0 and mask[LAST_ROW][460] != 0):
+            if (mask[LAST_ROW][160] != 0 and mask[LAST_ROW][440] != 0):
                 self.motors.sendV(-1)
                 self.motors.sendW(0)
 
